@@ -1,7 +1,7 @@
 /* Yağmur Lök - 2416501035 */
 :root {
     --no: 2416501035;
-    --ton: mod(var(--no), 360);
+    --ton: 315;
     --renk-ana: hsl(var(--ton), 65%, 38%);
     --renk-zemin: hsl(var(--ton), 30%, 97%);
     --font: "Times New Roman", serif;
