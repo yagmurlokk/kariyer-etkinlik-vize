@@ -3,14 +3,13 @@ import "./App.css";
 import Footer from "./components/layout/footer";
 import Header from "./components/layout/header";
 import type { PageName } from "./types/page";
-import { formatDate } from "./utils/format-date";
 import Navigation from "./components/layout/navigation";
 import EventList from "./components/events/eventlist";
 import EventFilter from "./components/events/eventfilter";
 import EventDetail from "./components/events/eventdetail";
 import EventForm from "./components/forms/eventform";
 import { events } from "./data/events";
-import type { CampusEvent, Category } from "./types/campus-event";
+import type { Category } from "./types/campus-event";
 import { searchEvents, filterByCategory, findEventById } from "./utils/filter-events";
 function App() {
   const [page, setPage] = useState<PageName>("home");
