@@ -16,21 +16,24 @@
     padding: 0;
 }
 
+
+
 body {
-    font-family: var(--font);
+   font-family: var(--font);
     background-color: var(--renk-zemin);
     color: #222;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; 
 }
 
 .container {
-    padding: var(--bosluk-m);
+    
+   padding: var(--bosluk-m);
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 /* 1. HEADER & NAVBAR (Üst Menü) */
@@ -291,14 +294,21 @@ h2 {
     font-size: 0.95rem;
 }
 
+
 /* 5. FOOTER (Alt Bilgi) */
 footer {
     background-color: #f0f0f0;
     text-align: center;
-    padding: var(--bosluk-m);
+    padding: 15px; 
     font-size: 0.9rem;
     color: #555;
     border-top: 1px solid #e0e0e0;
+    width: 100%;
+    margin-top: auto; 
+    flex-shrink: 0;
+
+    
+    
 }
 
 /* 6. MOBİL UYUMLULUK (Responsive) */

@@ -1,0 +1,1 @@
+export const formatDate = (dateStr: string) => dateStr.split("-").join(".");
