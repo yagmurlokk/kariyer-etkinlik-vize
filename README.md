@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# Kariyer Etkinlik Projesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Canlı Proje Adresi:** [https://yagmurlok-frontend.vercel.app/](https://yagmurlok-frontend.vercel.app/)
 
-Currently, two official plugins are available:
+## Kurulum
+Projeyi yerel ortamınızda çalıştırmak için terminalde sırasıyla aşağıdaki komutları uygulayın:
+npm install
+npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+/ - Ana Sayfa (HomePage.tsx)
 
-## React Compiler
+/etkinlikler - Etkinlik Listesi (EventsPage.tsx)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+/etkinlik/:id - Etkinlik Detay Sayfası (EventDetailPage.tsx)
 
-## Expanding the Oxlint configuration
+/etkinlik-ekle - Yeni Etkinlik Ekleme (AddEventPage.tsx)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+/etkinlik-duzenle/:id - Etkinlik Düzenleme (EditEventPage.tsx)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+/giris - Giriş Yap (LoginPage.tsx)
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+/kayit - Kayıt Ol (RegisterPage.tsx)
+
+/sifremi-unuttum - Şifre Sıfırlama (ForgotPasswordPage.tsx)
+
+/admin - Yönetici Paneli (AdminPage.tsx)
+
+* - 404 Sayfa Bulunamadı (NotFoundPage.tsx)
+
+Geliştirici: Yağmur Lök | Okul No: 2416501035
+
