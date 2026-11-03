@@ -1,4 +1,11 @@
 import type { CampusEvent } from "../types/campus-event";
+import kariyerGunleriImg from '../assets/kariyergunleri.png';
+import robotikImg from '../assets/robotikresim.jpg';
+import yazilimImg from '../assets/yazilimresim.jpg';
+import yapayzekaImg from '../assets/yapayzekaresim.webp';
+import mobiluygulamaImg from '../assets/mobiluygulamaresim.jpg';
+import siberguvenlikImg from '../assets/siberguvenlikresim.jpeg';
+
 
 export const events: CampusEvent[] = [
   {
@@ -10,7 +17,7 @@ export const events: CampusEvent[] = [
     location: "A Blok Konferans Salonu",
     description: "Mezunlarla söyleşiler ve staj imkanları.",
     capacity: 120,
-    image: "/afis.svg"
+    image: kariyerGunleriImg
   },
   {
     id: "event-2",
@@ -21,7 +28,7 @@ export const events: CampusEvent[] = [
     location: "Lab 2",
     description: "Mikrodenetleyiciler ve otonom robot tasarımları.",
     capacity: 30,
-    image: "/afis.svg"
+    image: robotikImg 
   },
   {
     id: "event-3",
@@ -32,7 +39,7 @@ export const events: CampusEvent[] = [
     location: "Büyük Salon",
     description: "Yazılım dünyasındaki güncel bulut ve web teknolojileri.",
     capacity: 250,
-    image: "/afis.svg"
+    image:yazilimImg
   },
   {
     id: "event-4",
@@ -43,7 +50,7 @@ export const events: CampusEvent[] = [
     location: "Mühendislik Fakültesi Amfi 1",
     description: "Üretken yapay zeka modelleri üzerine panel.",
     capacity: 100,
-    image: "/afis.svg"
+    image: yapayzekaImg
   },
   {
     id: "event-5",
@@ -54,7 +61,7 @@ export const events: CampusEvent[] = [
     location: "İnovasyon Merkezi",
     description: "24 saatlik kesintisiz mobil arayüz geliştirme maratonu.",
     capacity: 40,
-    image: "/afis.svg"
+    image: mobiluygulamaImg
   },
   {
     id: "event-6",
@@ -65,6 +72,6 @@ export const events: CampusEvent[] = [
     location: "Merkez Kütüphane Konferans Salonu",
     description: "Ağ güvenliği ve siber savunma stratejileri paneli.",
     capacity: 180,
-    image: "/afis.svg"
+    image: siberguvenlikImg 
   }
 ];

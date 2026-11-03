@@ -18,8 +18,13 @@
 
 
 
+html,
 body {
-   font-family: var(--font);
+    height: 100%;
+}
+
+body {
+    font-family: var(--font);
     background-color: var(--renk-zemin);
     color: #222;
     display: flex;
@@ -27,9 +32,15 @@ body {
     min-height: 100vh; 
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
 .container {
-    
-   padding: var(--bosluk-m);
+    padding: var(--bosluk-m);
     max-width: 1100px;
     margin: 0 auto;
     width: 100%;
@@ -52,19 +63,37 @@ body {
 .navbar nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
+.navbar nav button,
 .navbar nav a {
+    background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 16px;
+    border-radius: var(--kose);
     text-decoration: none;
+    font-family: var(--font);
     font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.navbar nav a:hover,
+.navbar nav button:hover,
+.navbar nav a:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    text-decoration: none;
+}
+
+.navbar nav button.active,
 .navbar nav a.active {
-    text-decoration: underline;
+    background-color: #ffffff;
+    color: var(--renk-ana);
+    border-color: #ffffff;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Başlıklar */
@@ -165,17 +194,22 @@ h2 {
 }
 
 /* 3. ETKİNLİK DETAY SAYFASI DÜZENİ */
-.detail-card {
+.detail-card,
+.detay {
     background-color: #ffffff;
     border-radius: var(--kose);
     padding: var(--bosluk-m);
     border: 1px solid #dcdcdc;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .detail-layout {
     display: flex;
     gap: var(--bosluk-m);
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Soldaki Afiş Görsel Kutusu */
@@ -227,16 +261,25 @@ h2 {
     line-height: 1.6;
 }
 
-.btn-back {
+.btn-back,
+.btn-secondary {
     display: inline-block;
-    margin-top: 14px;
-    color: var(--renk-ana);
+    background-color: var(--renk-ana);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
 }
 
-.btn-back:hover {
-    text-decoration: underline;
+.btn-back:hover,
+.btn-secondary:hover {
+    opacity: 0.9;
+    text-decoration: none;
 }
 
 /* 4. FORM ALANLARI (Ekle & Güncelle Sayfası) */
@@ -377,15 +420,20 @@ textarea[aria-invalid="true"] {
 }
 /* Güncelle Butonu Stili */
 .btn-update {
-    display: inline-block;
-    background-color: var(--renk-ana);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5a7b2c; /* Görseldeki zeytin yeşili */
     color: #ffffff !important;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: var(--kose);
+    border: none;
+    width: 110px;
+    height: 42px;
+    border-radius: var(--kose); /* 12px yerine 8px köşeler */
+    font-family: var(--font);
+    font-size: 18px;
     font-weight: bold;
-    font-size: 0.95rem;
-    transition: opacity 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
 }
 
 .btn-update:hover {
@@ -445,4 +493,85 @@ button.btn-detail {
     font-family: inherit;
     font-size: inherit;
     text-align: left;
+}
+
+
+.tablo {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.tablo th,
+.tablo td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tablo th {
+    background: var(--renk-ana);
+    color: #fff;
+    font-weight: bold;
+}
+
+.tablo td {
+    border-bottom: 1px solid #eaeaea;
+    background-color: #ffffff;
+}
+
+.tablo td > div,
+.islemler {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 8px;
+}
+
+.tablo .btn-primary.buton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    padding: 0 20px !important;
+    border-radius: var(--kose);
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.buton-sil {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cb3333;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: var(--kose);
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.buton-sil:hover {
+    background-color: #ad2222;
+}
+
+@media (max-width: 699px) {
+  .tablo thead { display: none; }
+  .tablo tr { display: block; border: 1px solid var(--renk-kenar, #ccc); border-radius: var(--kose); margin-bottom: 12px; }
+  .tablo td { display: block; }
+  .tablo td.islemler { display: flex; }
+  .tablo td[data-baslik]::before {
+    content: attr(data-baslik) ": ";
+    font-weight: 700;
+  }
 }
